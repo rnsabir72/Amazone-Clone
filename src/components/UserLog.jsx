@@ -3,9 +3,7 @@ import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { auth } from "../firebase";
-import { useStateValue } from "../StateProvider";
 function UserLog() {
-  const [{ isUser, Username }, dispatch] = useStateValue();
   const [email, updateemail] = useState("");
   const [password, updatePassword] = useState("");
   const [signUp, setSignUp] = useState(false);
@@ -28,7 +26,7 @@ function UserLog() {
     if (signUp) {
       auth
         .createUserWithEmailAndPassword(email, password)
-        .then(dispatch({}))
+        .then()
         .catch((error) => {
           alert(error.message);
         });
@@ -96,5 +94,4 @@ function UserLog() {
     </div>
   );
 }
-
 export default UserLog;

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Makecard(props) {
   const [storeItems, UpdateStoreItems] = useState([]);
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(props.fetchUrl);
