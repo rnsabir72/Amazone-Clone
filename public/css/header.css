@@ -1,0 +1,342 @@
+/* Base Navbar */
+.navbar {
+  width: 100%;
+  background-color: #131921;
+  position: fixed !important;
+  color: white;
+  top: 0 !important;
+  z-index: 1000;
+  font-size: 10px;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 0 10px;
+  top: 0;
+  display: flex;
+  align-items: stretch;
+  height: 60px;
+}
+
+/* Navbar child elements */
+.navbar > div,
+.navbar .logo,
+.navbar .log,
+.navbar form,
+.navbar .flag,
+.navbar .hamburger {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: auto 0;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.navbar .hamburger {
+  font-size: 20px;
+  color: white;
+}
+
+.navbar .hamburger:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* Logo */
+.navbar .logo {
+  padding: 5px 10px;
+}
+
+.navbar .logo img {
+  width: 80px;
+  height: auto;
+  filter: brightness(1.5);
+}
+
+/* Address log */
+.navbar .log {
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  min-width: 100px;
+  max-width: 150px;
+}
+
+.navbar .log .bold {
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.navbar .log .bold i {
+  font-size: 14px;
+}
+
+.navbar .log:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* Search form */
+.navbar form {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 10px;
+}
+
+.navbar input {
+  padding: 0 10px;
+  border: none !important;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 35px;
+  font-size: 14px;
+  max-width: 500px;
+}
+
+.navbar .btn {
+  color: black !important;
+  padding: 0 15px;
+  border: none !important;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffc074;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar .btn:hover {
+  background-color: #ffb74d;
+}
+
+/* Pakistani Flag */
+.navbar .flag {
+  margin-left: 15px;
+  width: 32px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%2301411C'/%3E%3Crect x='0' y='0' width='15' height='40' fill='white'/%3E%3Ctext x='42' y='25' font-size='16' fill='white' text-anchor='middle' dominant-baseline='middle'%3E%E2%98%AA%3C/text%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.navbar .flag:hover {
+  opacity: 0.8;
+}
+
+/* Cart and Other Links */
+.navbar .cart {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .cart .bold {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .cart .item-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f08804;
+  font-weight: 700;
+}
+
+/* Sign In Button */
+.navbar .display-toggle.signIn {
+  padding: 5px 10px;
+}
+
+.navbar .display-toggle.signIn button {
+  padding: 5px 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.navbar .display-toggle.signIn button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Display toggle for mobile */
+.display-toggle {
+  display: none;
+}
+
+.navbar div {
+  color: white;
+  margin: auto 0;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  padding: 5px 10px;
+}
+
+.navbar .logo img {
+  margin-top: 0;
+  width: 80px;
+  height: auto;
+  filter: brightness(1.5);
+}
+
+.navbar .log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.navbar .log .bold {
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .log .bold i {
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+.navbar .log a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .log:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.navbar input {
+  padding: 0px 10px;
+  border: none !important;
+  width: 45vw;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 35px;
+  font-size: 14px;
+  max-width: 500px;
+}
+
+.navbar .btn {
+  color: black !important;
+  padding: 0 15px;
+  border: none !important;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffc074;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar .btn:hover {
+  background-color: #ffb74d;
+}
+
+.navbar form {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 10px;
+}
+
+.navbar .hamburger {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar .hamburger:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+.navbar div {
+  color: white;
+  margin: auto;
+  border: 1px solid transparent;
+  padding: 5px 1px;
+  width: auto;
+  height: 45px;
+  cursor: pointer;
+}
+.logo img {
+  margin-top: 10px;
+  width: 80px;
+  height: 25px;
+  filter: brightness(1);
+}
+.navbar input {
+  padding: 0px 2px;
+  border: none !important;
+  width: 45vw;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 30px;
+}
+.navbar .btn {
+  color: black !important;
+  padding:3px 5px;
+  border: none !important;
+  position: relative !important;
+  right: 19px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 0;
+  background-color: #ffc074;
+}
+.navbar .flag {
+  margin-left: 15px;
+  width: 32px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect fill='%230034a4' width='600' height='400'/%3E%3Crect fill='%23ffffff' y='133.33' width='600' height='133.33'/%3E%3Crect fill='%230034a4' y='266.66' width='600' height='133.34'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.navbar .flag:hover {
+  opacity: 0.8;
+}
+.navbar div:hover {
+  border: 1px solid white;
+}
+.display-toggle {
+  display: none;
+}
+.item-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
