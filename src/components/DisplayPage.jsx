@@ -10,18 +10,19 @@ function DisplayPage() {
   console.log(itemId);
   const category=itemId.category
 
- useEffect(() => {
-   async function fetchData() {
-    const request = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
-      console.log(request.data);
-      updateRecommends(request.data);
-      request.data.map((item) => {
-        item.id === parseInt(id) && updateItem(item);
-      });
-      return request;
-    }
-    fetchData();
- }, [id]);
+  useEffect(() => {
+    async function fetchData() {
+     const request = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
+       console.log(request.data);
+       updateRecommends(request.data);
+       const foundItem = request.data.find(item => item.id === parseInt(id));
+       if (foundItem) {
+         updateItem(foundItem);
+       }
+       return request;
+     }
+     fetchData();
+  }, [id, category]);
  function displayItem(item) {
   return (
     <div className="image row-item" key={item.id}>

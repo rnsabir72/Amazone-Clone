@@ -1,5 +1,4 @@
 import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import React from "react";
 import { useStateValue } from "../StateProvider";
 import { useState } from "react";
@@ -8,13 +7,10 @@ import { useEffect } from "react";
 function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [{ basket }, dispatch] = useStateValue();
-  var price = 0;
   useEffect(() => {
-    basket.map((item) => {
-      price += parseFloat(item.price);
-      setTotalPrice(price);
-    });
-  }, []);
+    const total = basket.reduce((sum, item) => sum + parseFloat(item.price || 0), 0);
+    setTotalPrice(total);
+  }, [basket]);
   function displayCartItem(item, index) {
     return (
       <div key={item.id}>
